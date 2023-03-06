@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true" class="primario">
+  <ion-card class="terciario">
+    <ion-card-header>
+      <ion-card-title>Farmaceuticas</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col *ngFor="let documentTarea of arrayColeccionTareas" (click)="selecFarmaceutica(documentTarea)" size-xl="3"
+            size-lg="3" size-md="4" size-sm="6" size-xs="12">
+            <ion-card>
+              <img alt="Televisor" src="https://source.unsplash.com/random/500x500/?{{documentTarea.data.marca}}" />
+              <ion-card-header>
+                <ion-card-title>
+                  <h1>Farmaceuticas</h1>
+                </ion-card-title>
+                <ion-card-subtitle>
+                  <h1><ion-text color="primary"></ion-text>{{documentTarea.data.empresa}}</h1>
+                </ion-card-subtitle>
+                <ion-card-subtitle>
+                  <h1><ion-text color="primary"></ion-text>{{documentTarea.data.medicamento}}</h1>
+                </ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+
+
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab-button class="Añadir secundario" style=" position: fixed; right: 0;bottom: 0; margin:10px;"
+    (click)="clickBotonInsertar()">Añadir</ion-fab-button>
+</ion-content>

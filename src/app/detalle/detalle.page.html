@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar> 
+    <ion-title size="large" class="titulo">Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="primario">
+
+  <ion-card class="terciario">
+    <ion-card-header>
+      <ion-card-title>Empresa</ion-card-title>
+      <ion-card-subtitle> <ion-input [(ngModel)]="document.data.empresa"></ion-input></ion-card-subtitle>
+    </ion-card-header>
+
+
+    <ion-card-header>
+      <ion-card-title>Medicamento</ion-card-title>
+      <ion-card-subtitle><ion-input [(ngModel)]="document.data.medicamento"></ion-input></ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-button class="secundario" fill="clear" (click)="volver()">Volver </ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="presentAlert()">Borrar </ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="clicBotonModificar()">Modificar </ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(this.nuevo)" (click)="clickBotonInsertar()">Guardar </ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="uploadImagePicker()"> Imagen </ion-button>
+  </ion-card>
+
+
+
+</ion-content>

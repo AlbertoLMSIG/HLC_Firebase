@@ -25,3 +25,14 @@
 #container a {
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  #mapId {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 480px) {
+  #mapId {
+    height: 20vh;
+}
+}

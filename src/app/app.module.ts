@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { ImagePicker } from '@awesome-cordova-plugins/image-picker/ngx';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
+import { CallNumber } from '@awesome-cordova-plugins/call-number/ngx';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -14,7 +16,7 @@ import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig), AngularFireModule, AngularFireStorageModule],
-  providers: [ImagePicker, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [ImagePicker, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, SocialSharing, CallNumber],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

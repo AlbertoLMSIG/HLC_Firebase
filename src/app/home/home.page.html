@@ -7,8 +7,8 @@
     <ion-card-content>
       <ion-grid>
         <ion-row>
-          <ion-col *ngFor="let documentTarea of arrayColeccionTareas" (click)="selecFarmaceutica(documentTarea)" size-xl="3"
-            size-lg="3" size-md="4" size-sm="6" size-xs="12">
+          <ion-col *ngFor="let documentTarea of arrayColeccionTareas" (click)="selecFarmaceutica(documentTarea)"
+            size-xl="3" size-lg="3" size-md="4" size-sm="6" size-xs="12">
             <ion-card>
               <img alt="Televisor" src="https://source.unsplash.com/random/500x500/?{{documentTarea.data.marca}}" />
               <ion-card-header>
@@ -16,23 +16,45 @@
                   <h1>Farmaceuticas</h1>
                 </ion-card-title>
                 <ion-card-subtitle>
-                  <h1><ion-text color="primary"></ion-text>{{documentTarea.data.empresa}}</h1>
+                  <h1>
+                    <ion-text color="primary"></ion-text>{{documentTarea.data.empresa}}
+                  </h1>
                 </ion-card-subtitle>
                 <ion-card-subtitle>
-                  <h1><ion-text color="primary"></ion-text>{{documentTarea.data.medicamento}}</h1>
+                  <h1>
+                    <ion-text color="primary"></ion-text>{{documentTarea.data.medicamento}}
+                  </h1>
                 </ion-card-subtitle>
               </ion-card-header>
             </ion-card>
-
-
           </ion-col>
         </ion-row>
-
       </ion-grid>
-
     </ion-card-content>
-  </ion-card>
+    <h2>Direccion en el mapa:</h2>
+    <div id="mapId" style="width: 500px; height: 350px; margin: 0 auto; display: flex; align-items: center;"></div>
 
-  <ion-fab-button class="Añadir secundario" style=" position: fixed; right: 0;bottom: 0; margin:10px;"
+  </ion-card>
+  <ion-fab-button class="Añadir secundario" style="position: fixed; right: 60px; bottom: 0; margin: 65px"
     (click)="clickBotonInsertar()">Añadir</ion-fab-button>
+  <ion-fab-button (click)="llamar()" class="llamada"
+    style="position: fixed; right: 0; bottom: 0; margin: 65px"><ion-icon name="call"></ion-icon></ion-fab-button>´
+  <ion-fab-button (click)="compartir()" id="share" style="position: fixed; right: 120px; bottom: 0; margin: 65px">
+    <ion-icon name="share"></ion-icon>
+  </ion-fab-button>
 </ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home" id="icons"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="informacion">
+        <ion-icon name="information-circle" id="icons"></ion-icon>
+        <ion-label>Sobre la App</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

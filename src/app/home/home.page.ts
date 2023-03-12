@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { CallNumber } from '@awesome-cordova-plugins/call-number/ngx';
 import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
 import * as L from 'leaflet';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',

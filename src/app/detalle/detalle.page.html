@@ -18,11 +18,11 @@
       <ion-card-subtitle><ion-input [(ngModel)]="document.data.medicamento"></ion-input></ion-card-subtitle>
     </ion-card-header>
 
-    <ion-button class="secundario" fill="clear" (click)="volver()">Volver </ion-button>
-    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="presentAlert()">Borrar </ion-button>
-    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="clicBotonModificar()">Modificar </ion-button>
-    <ion-button class="secundario" fill="clear" *ngIf="(this.nuevo)" (click)="clickBotonInsertar()">Guardar </ion-button>
-    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="uploadImagePicker()"> Imagen </ion-button>
+    <ion-button class="secundario" fill="clear" (click)="volver()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="presentAlert()"><ion-icon name="trash-outline"></ion-icon></ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="clicBotonModificar()"><ion-icon name="refresh-circle-outline"></ion-icon></ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(this.nuevo)" (click)="clickBotonInsertar()"><ion-icon name="save-outline"></ion-icon></ion-button>
+    <ion-button class="secundario" fill="clear" *ngIf="(!this.nuevo)" (click)="uploadImagePicker()"> <ion-icon name="images-outline"></ion-icon></ion-button>
   </ion-card>
 </ion-content>
 <ion-toolbar>
